@@ -13,7 +13,7 @@ def get_dob():
 
 def get_age(dob):
     # write code here
-	current_date= date(2019,9,4)
+	current_date = date.today()
 	if(dob > current_date):
 		return("Sorry, this is invalid Date")
 	else:
