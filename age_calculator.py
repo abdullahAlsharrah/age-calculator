@@ -17,16 +17,8 @@ def get_age(dob):
 	if(dob > current_date):
 		return("Sorry, this is invalid Date")
 	else:
-		if(dob.month > current_date.month):
-			return current_date.year - dob.year
-		elif(dob.month == current_date.month):
-			if(dob.day>=current_date.day):
-				return current_date.year - dob.year 
-			else:
-				return current_date.year - dob.year -1 
+		return current_date.year - dob.year - ((current_date.month, current_date.day) < (dob.month, dob.day))
 
-		else:
-			return current_date.year - dob.year -1 
 ...
 
 
